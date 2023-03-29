@@ -9,7 +9,7 @@ services:
       - dnmonster
       - redis
     networks:
-      - local
+      - bridge
 
   dnmonster:
     image : amouat/dnmonster:1.0
@@ -19,5 +19,5 @@ services:
 
 
 networks:
-  local:
-    driver: bridge
+  bridge:
+    external : true 
