@@ -9,15 +9,20 @@ services:
       - dnmonster
       - redis
     networks:
-      - local
+      - jenkins_test
 
   dnmonster:
     image : amouat/dnmonster:1.0
+    networks:
+      - jenkins_test
+
   
   redis:
     image : redis:latest
+    networks:
+      - jenkins_test
 
 
 networks:
-  local:
-    driver: bridge
+  jenkins_test:
+    external : true 
