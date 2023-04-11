@@ -1,0 +1,2 @@
+Pour faire communiquer le container jenkins avec les autres containers, il faut les ajouter au meme network avec la commande docker network
+
